@@ -5,6 +5,24 @@ body {
     color: #435560;
 }
 
+.nav-menu {
+    width: fit-content;
+}
+
+.nav-bar {
+    color: tomato;
+    text-decoration: none;
+}
+
+.nav-bar:hover {
+    text-decoration: none;
+}
+
+.nav-bar:visited {
+    color: #435560;
+    text-decoration: none;
+}
+
 /* INDEX PAGE */
 
 .index-title-box,
@@ -57,7 +75,8 @@ body {
 
 /* BLOGPOST PAGE */
 
-.blog-title, .blog-date {
+.blog-title,
+.blog-date {
     color: #435560;
 }
 
