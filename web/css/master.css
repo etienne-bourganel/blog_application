@@ -2,19 +2,46 @@
 
 body {
     background-color: #dddddd;
-    margin: 0px;
     color: #435560;
+    height: 100%;
+    margin: 0px;
+    position: relative;
+}
+
+.main-container {
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 40px;
 }
 
 .nav-menu {
-    background-color: #dddddd;
+    align-items: center;
+    background-color: #A7B0CF;
     display: flex;
     height: 40px;
-    align-items: center;
+    justify-content:left;
     margin: 0px;
     overflow: hidden;
+    padding-left: 30px;
     position: fixed;
     top: 0;
+    width: 100%;
+    z-index:99;
+}
+
+.contact-menu {
+    align-items: center;
+    bottom: 0;
+    background-color: #A7B0CF;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin: 0px;
+    overflow: hidden;
+    position: absolute;
+    vertical-align: middle;
     width: 100%;
 }
 
@@ -24,7 +51,18 @@ body {
     float: left;
     font-size: 1.5em;
     font-weight: bold;
-    margin-left: 30px;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.contact-bar {
+    color: #435560;
+    display:inline-block;
+    /* display: block;
+    float: left; */
+    font-size: 1em;
+    font-weight: lighter;
+    margin-right: 30px;
     text-decoration: none;
 }
 
@@ -34,9 +72,15 @@ body {
     text-decoration: none;
 }
 
-.nav-bar:hover {
+.nav-bar:hover, .contact-bar:hover {
     color: #a9294f;
     text-decoration: none;
+}
+
+.contact-img {
+    display: block;
+    height: 18px;
+    margin-right: 5px;
 }
 
 
@@ -50,7 +94,7 @@ body {
 }
 
 .blog-summary-box {
-    margin: 50px auto 0px auto;
+    margin: 50px auto 30px auto;
     color: #435560;
 }
 
