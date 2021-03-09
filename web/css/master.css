@@ -2,32 +2,49 @@
 
 body {
     background-color: #dddddd;
+    margin: 0px;
     color: #435560;
 }
 
 .nav-menu {
-    width: fit-content;
+    background-color: #dddddd;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    margin: 0px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .nav-bar {
-    color: tomato;
+    color: #435560;
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 30px;
     text-decoration: none;
 }
 
-.nav-bar:hover {
-    text-decoration: none;
-}
 
 .nav-bar:visited {
     color: #435560;
     text-decoration: none;
 }
 
+.nav-bar:hover {
+    color: #a9294f;
+    text-decoration: none;
+}
+
+
 /* INDEX PAGE */
 
 .index-title-box,
 .blog-title-box {
-    margin: 20px auto 0px auto;
+    margin: 70px auto 0px auto;
     text-align: center;
     width: fit-content;
 }
