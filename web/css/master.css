@@ -1,4 +1,4 @@
-/* ALL PAGES */
+/* MAIN ELEMENTS */
 
 body {
     background-color: #dddddd;
@@ -10,71 +10,70 @@ body {
 
 .main-container {
     min-height: 100vh;
-    overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
+    /* SPACE FOR FOOTER */
 }
 
-.nav-menu {
+/* BARS & BAR ELEMENTS */
+
+.bar {
     align-items: center;
     background-color: #A7B0CF;
     display: flex;
     height: 40px;
-    justify-content:left;
     margin: 0px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:visited {
+    color: #435560;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #a9294f;
+    text-decoration: none;
+}
+
+.bar-element {
+    color: #435560;
+    display: block;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.nav-bar {
+    justify-content: left;
     overflow: hidden;
     padding-left: 30px;
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index:99;
+    z-index: 99;
 }
 
-.contact-menu {
-    align-items: center;
+.contact-bar {
     bottom: 0;
-    background-color: #A7B0CF;
-    display: flex;
-    height: 40px;
     justify-content: center;
-    margin: 0px;
-    overflow: hidden;
     position: absolute;
     vertical-align: middle;
     width: 100%;
 }
 
-.nav-bar {
-    color: #435560;
-    display: block;
-    float: left;
+.nav-element {
     font-size: 1.5em;
     font-weight: bold;
-    margin-right: 30px;
-    text-decoration: none;
 }
 
-.contact-bar {
-    color: #435560;
-    display:inline-block;
-    /* display: block;
-    float: left; */
+.contact-element {
     font-size: 1em;
     font-weight: lighter;
-    margin-right: 30px;
-    text-decoration: none;
-}
-
-
-.nav-bar:visited {
-    color: #435560;
-    text-decoration: none;
-}
-
-.nav-bar:hover, .contact-bar:hover {
-    color: #a9294f;
-    text-decoration: none;
 }
 
 .contact-img {
@@ -83,13 +82,13 @@ body {
     margin-right: 5px;
 }
 
-
 /* INDEX PAGE */
 
 .index-title-box,
 .blog-title-box {
     margin: 70px auto 0px auto;
     text-align: center;
+    text-decoration: none;
     width: fit-content;
 }
 
@@ -105,33 +104,12 @@ body {
 }
 
 .index-title--img,
-.blog-title--img {
-    display: block;
-    margin: 0px auto;
-    width: 600px;
-}
-
+.blog-title--img,
 .all-blogs-box,
 .blog-content {
+    display: block;
     margin: 0px auto;
     width: 600px;
-}
-
-.blog-summary-link {
-    display: block;
-    height: 100%;
-    text-decoration: none;
-    width: 100%;
-}
-
-.blog-summary-link:visited {
-    color: #435560;
-    text-decoration: none;
-}
-
-.blog-summary-link:hover {
-    color: #a9294f;
-    text-decoration: none;
 }
 
 /* BLOGPOST PAGE */
