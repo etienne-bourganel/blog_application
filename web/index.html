@@ -1,70 +1,27 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8" lang="eng">
-    <title>Blog Application</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/master.css">
-</head>
-
-<body>
-
-    <header>
-        <div class="nav-bar bar">
-            <a class="bar-element nav-element link" href="index.html" title="Home" rel="noopener">Home </a>
-            <a class="bar-element nav-element link" href="" title="Latest blog" rel="noopener">Latest blogpost</a>
-        </div>
-    </header>
+{{ template "header" . }}
 
     <div class="main-container">
         <div class="index-title-box">
             <h1 class="index-title">Welcome to my blog</h1>
-            <img class="index-title--img" src="images/title_img.jpeg" alt="Brösarps Landscape">
+            <img class="index-title--img" src="/images/title_img.jpeg" alt="Brösarps Landscape">
         </div>
 
         <div class="all-blogs-box">
+           
+            {{range .Posts}}
+           
             <div class="blog-summary-box">
-                <a class="blog-summary-link link" href="blogpost.html" title="First blogpost" target="_blank"
+                <a class="blog-summary-link link" href="/post/{{.ID}}" title="First blogpost" target="_blank"
                     rel="noopener">
-                    <h2 class="blog-summary-title">My first blog</h2>
-                    <h3 class="blog-summary-date">Monday, 8 March 2021</h3>
+                    <h2 class="blog-summary-title">{{.Title}}</h2>
+                    <h3 class="blog-summary-date">{{.PublishedAt}}</h3>
                     <p class="blog-summary-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, adipisci? Exercitationem dolore,
-                        assumenda odio illo quia sequi quidem culpa beatae minima sit voluptas temporibus officia
-                        dolorem
-                        repellat hic modi eaque!
+                        {{.Summary}}
                     </p>
                 </a>
             </div>
 
-            <div class="blog-summary-box">
-                <a class="blog-summary-link link" href="blogpost.html" title="Second blogpost" target="_blank"
-                    rel="noopener">
-                    <h2 class="blog-summary-title">My second blog</h2>
-                    <h3 class="blog-summary-date">Monday, 8 March 2021</h3>
-                    <p class="blog-summary-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, adipisci? Exercitationem dolore,
-                        assumenda odio illo quia sequi quidem culpa beatae minima sit voluptas temporibus officia
-                        dolorem
-                        repellat hic modi eaque!
-                    </p>
-                </a>
-            </div>
-
-            <div class="blog-summary-box">
-                <a class="blog-summary-link link" href="blogpost.html" title="Third blogpost" target="_blank"
-                    rel="noopener">
-                    <h2 class="blog-summary-title">My third blog</h2>
-                    <h3 class="blog-summary-date">Monday, 8 March 2021</h3>
-                    <p class="blog-summary-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, adipisci? Exercitationem dolore,
-                        assumenda odio illo quia sequi quidem culpa beatae minima sit voluptas temporibus officia
-                        dolorem
-                        repellat hic modi eaque!
-                    </p>
-                </a>
-            </div>
+            {{end}}
 
         </div>
     </div>
@@ -72,10 +29,10 @@
     <footer class="contact-bar bar">
         <a class="bar-element contact-element">Hi! I am Etienne. You can find more about me here:</a>
 
-        <img class="contact-img" src="images/linkedin.png" alt="LinkedIn">
+        <img class="contact-img" src="/images/linkedin.png" alt="LinkedIn">
         <a class="bar-element contact-element link" href="https://www.linkedin.com/in/etiennebourganel/">LinkedIn</a>
 
-        <img class="contact-img" src="images/github.png" alt="GitHub">
+        <img class="contact-img" src="/images/github.png" alt="GitHub">
         <a class="bar-element contact-element link" href="https://github.com/etienne-bourganel">GitHub</a>
     </footer>
 
